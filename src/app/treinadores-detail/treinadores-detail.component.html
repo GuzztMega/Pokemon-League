@@ -1,0 +1,13 @@
+<div *ngIf="treinador">
+
+  <h2>{{ treinador.nome }}'s Details</h2>
+  <div><span>ID: </span>{{treinador.id}}</div>
+  <div>
+    <label>NAME:<br/>
+      <input [(ngModel)]="treinador.nome" placeholder="nome"/>
+    </label>
+  </div>
+
+  <button (click)="goBack()">Done</button>
+
+</div>

@@ -1,0 +1,21 @@
+<h2>Os Treinadores</h2>
+
+<div>
+  <label id="nomeTreinador">
+    <input #treinadorNome placeholder="Nome do Treinador" style="border-radius: 5px;"/>
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button class="adicionar" (click)="add(treinadorNome.value); treinadorNome.value=''">
+    add
+  </button>
+</div>
+<br/>
+
+<ul class="treinadores">
+  <li *ngFor="let treinador of treinadores">
+    <a routerLink="/detail/{{treinador.id}}">
+      <span class="badge">{{ treinador.id }}</span> {{ treinador.nome }}
+    </a>
+    <button class="delete" title="Apagar Treinador" (click)="delete(treinador)">x</button>
+  </li>
+</ul> 
