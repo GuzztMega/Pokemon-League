@@ -23,10 +23,13 @@ h4 {
   position: relative;
 }
 .grid {
-  margin: 0;
+  display: flex;
+  justify-content: center;
 }
-.col-1-4 {
-  width: 25%;
+.col-1-4 {  
+  width: 20%;
+  display: flex;
+  justify-content: center;
 }
 .module {
   margin-top: 30px;
@@ -39,20 +42,32 @@ h4 {
   border-radius: 5px;
 }
 .module:hover {
+  transform: scale(1.02);
+  transition: 0.4s;
   background-color: #eee;
   cursor: pointer;
   color:  #c22424;
 }
 .grid-pad {
   padding: 10px 0;
-}
+} 
 .grid-pad > [class*='col-']:last-of-type {
   padding-right: 20px;
 }
 @media (max-width: 600px) {
   .module {
+    margin-left: auto;
+    margin-right: auto;
     font-size: 10px;
     max-height: 75px; }
+  .grid {
+    display: contents;
+  }
+  .col-1-4 {  
+    width: 20%;
+    display: contents;
+    
+  }
 }
 @media (max-width: 1024px) {
   .grid {

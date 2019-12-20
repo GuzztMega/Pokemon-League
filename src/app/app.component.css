@@ -5,6 +5,9 @@ h1 {
   color: #FFF;
   margin-bottom: 0.5em;
 }
+a {
+  margin: 0 8px;
+}
 h2 {
   font-size: 2em;
   margin-top: 0;
@@ -12,18 +15,22 @@ h2 {
 }
 nav a {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  align-content: space-between;
+  align-content: center;
   padding: 5px 10px;
   text-decoration: none;
   margin-top: 10px;
-  display: inline-block;
+  display: inline;
+  justify-content: center;
   background-color: #eee;
   border-radius: 4px;
+  width: 15%;
 }
 nav a:visited, a:link {
   color: #242424;
 }
 nav a:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
   color: #039be5;
   background-color: #cfd8dc;
 }
